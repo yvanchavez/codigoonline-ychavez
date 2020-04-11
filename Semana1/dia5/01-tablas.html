@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Tablas
+      </h1>
+    </header>
+    <main>
+      <section>
+          <h4>Tabla Simple</h4>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Profesion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Jorge</td>
+                <td>Garnica</td>
+                <td>Ingeniero</td>
+            </tr>
+            <tr>
+                <td>Michael</td>
+                <td>Garcia</td>
+                <td>Arquitecto</td>
+            </tr>
+            <tr>
+                <td>Jessica</td>
+                <td>Jimenez</td>
+                <td>Doctora</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+                <td>xxxx</td>
+                <td>xxxxx</td>
+                <td>xxxxxx</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <hr />
+      <section>
+          <h4>Combinar Columnas</h4>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Profesion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>Jorge</td>
+                  <td>Garnica</td>
+                  <td>Ingeniero</td>
+              </tr>
+              <tr>
+                  <td>Michael</td>
+                  <td>Garcia</td>
+                  <td>Arquitecto</td>
+              </tr>
+              <tr>
+                  <td>Jessica</td>
+                  <td>Jimenez</td>
+                  <td>Doctora</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                  <td colspan="3">Totales</td>
+                  
+              </tr>
+            </tfoot>
+          </table>
+      </section>
+      <hr />
+      <section>
+        <h4>Tabla Filas</h4>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Profesion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td rowspan="2">Jorge</td>
+              <td>Garnica</td>
+              <td rowspan="2">Ingeniero</td>
+          </tr>
+          <tr>
+              
+              <td>Garcia</td>
+          </tr>
+          <tr>
+              <td>Jessica</td>
+              <td>Jimenez</td>
+              <td>Doctora</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+              <td>xxxx</td>
+              <td>xxxxx</td>
+              <td>xxxxxx</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <section>
+        <h4>Ejercicio</h4>
+        <table border="1">
+            <tr >
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+                <td>d</td>
+                <td rowspan="5">e</td>
+            </tr>
+            <tr>
+                <td>f</td>
+                <td>g</td>
+                <td>h</td>
+                <td rowspan="4">i</td>
+            </tr>
+            <tr>
+                <td>j</td>
+                <td>k</td>
+                <td rowspan="3">l</td>
+            </tr>
+            <tr>
+                <td>m</td>
+                <td rowspan="2">n</td>
+            </tr>
+            <tr>
+                <td>o</td>
+            </tr>
+        </table>
+    </section>
+    </main>
+  </body>
+</html>
