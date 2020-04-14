@@ -61,13 +61,13 @@
           <p><label>Elija Turno</label></p>
           <p>
               <label for="turnoDia">Mañana</label>
-              <input type="radio" name="turno" id="turnoDia" checked>
+              <input type="radio" name="turno" id="turnoDia" checked value="m">
               |
               <label for="turnoTarde">Tarde</label>
-              <input type="radio" name="turno" id="turnoTarde">
+              <input type="radio" name="turno" id="turnoTarde"value="t">
               |
               <label for="turnoNoche">Noche</label>
-              <input type="radio" name="turno" id="turnoNoche">
+              <input type="radio" name="turno" id="turnoNoche"value="n">
           </p>
 
           <p>
@@ -75,18 +75,36 @@
           </p>
           <p>
               <label for="uxui">UX/UI</label>
-              <input type="checkbox" name="uxui" id="uxui">
+              <input type="checkbox" name="uxui" id="uxui" value="1">
               |
               <label for="git">Git</label>
-              <input type="checkbox" name="git" id="git">
+              <input type="checkbox" name="git" id="git" value="23">
               |
               <label for="devops">DevOps</label>
-              <input type="checkbox" name="devops" id="devops">
+              <input type="checkbox" name="devops" id="devops" value="65">
               
+          </p>
+
+          <p>
+            <label for="mensaje">Escriba un mensaje</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                      placeholder="Escriba un mensaje al administrador">
+            </textarea>
+          </p>
+          <p>
+            <label for="">Seleccione un País</label>
+            <select id="pais" name="pais">
+              <option value="0" selected>--Seleccione--</option>
+              <option value="pe">Perú</option>
+              <option value="ho">Honduras</option>
+              <option value="me">México</option>
+            </select>
           </p>
           
 
           <button type="submit">Registrarse</button>
+          <button type="button">Regresar al menú</button>
+          <button type="reset">Limpiar campos</button>
         </form>
       </section>
     </main>

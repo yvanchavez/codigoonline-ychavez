@@ -1,0 +1,28 @@
+/*Selector de nombre de etiqueta*/
+span {
+    color: tomato;
+}
+/*Selector multiple separado por comas (,) */
+li,p{
+    color: slateblue;
+}
+
+/* Selector de hijos de un elemento a cualquier nivel */
+aside a{
+    color: red;
+}
+
+/* Selector de hijos en primer nivel */
+article>h4{
+    color: green;
+}
+
+/* Selector de id */
+#titulo-dmovil{
+    color: chocolate;
+}
+
+/* Selector de clases */
+.lista-semanas{
+    color: grey;
+}
