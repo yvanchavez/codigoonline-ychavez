@@ -1,0 +1,37 @@
+/* Importando y declarando una fuente  */
+@font-face{
+    font-family: 'comic-neue';
+    src: url(./ComicNeue-Regular.ttf);
+}
+
+
+h1{
+    text-align: center;
+    background-color: aqua;
+}
+
+.letra-comic{
+    font-family: comic-neue;
+}
+p:not(.texto-footer) :not(.letra-comic){
+    /* Identa o agrega sangria a la primera linea de un texto  */
+    text-indent: 40px;
+
+    /* Espaciado entre letra y letra en un texto  */
+    letter-spacing: 5px;
+
+    /* Espaciado entre palabra y palabra en un texto  */
+
+    word-spacing: 15px;
+
+    /* Interliniado */
+    line-height: 13px;
+}
+small{
+    text-decoration:line-through
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
