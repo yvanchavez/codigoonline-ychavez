@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 200px;
+    background-color: lightcoral;
+    padding-top: 80px;    
+}
+h1{
+    text-align: center;
+}
+
+span{
+    background-color: limegreen;
+    padding: 10px 30px;
+}
