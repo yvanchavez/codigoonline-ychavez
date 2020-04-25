@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: thistle;
+}
+@media (max-width:1024px){
+    body{
+        background-color: teal;
+    }
+}
+@media (max-width:768px){
+    body{
+        background-color: teal;
+    }
+}
+@media (max-width:480px){
+    body{
+        background-color: teal;
+    }
+}
+
+@media (max-width:320px){
+    body{
+        background-color: teal;
+    }
+}

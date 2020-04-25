@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#div-1{
+    width: 150px;
+    height: 150px;
+    background-color: tomato;
+    animation: cambiardecolores 2s ease 0s infinite normal none;
+}
+
+#div-2{
+    margin: 100px auto 0px auto;
+    width: 64px;
+    height: 64px;
+    background: url(./actualizar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: girar 2s ease 0s infinite normal none;
+}
+@keyframes girar{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(180deg) scale(1.5);
+    }
+   
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cambiardecolores{
+    0%{
+        background-color: tomato;
+    }
+
+    50%{
+        background-color: red;
+        transform: scale(1.5);
+    }
+
+    100%{
+        background-color: orange;
+    }
+}

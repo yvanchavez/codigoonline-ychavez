@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 
 header{
@@ -14,5 +15,63 @@ header{
     /* border-width: 1px;
     border-style: solid;
     border-color: navy; */
-    border: 1px solid navy;
+    border: 3px solid navy;
 }
+
+#section-2{
+    width: 100px;
+    height: 100px;
+    background-color: mediumturquoise;
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: navy; */
+    border-bottom: 3px solid red;
+}
+
+#section-3{
+    width: 100px;
+    height: 100px;
+    border: 3px solid tomato;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+#section-4{
+    width: 100px;
+    height: 100px;
+    border: 3px solid darkgreen;
+    margin-top: 10px;  
+    border-top-right-radius: 20px; 
+    border-top-left-radius: 20px;
+}
+
+#section-5{
+    width: 100px;
+    height: 100px;
+    margin: 30px auto 0px auto;
+    border: 3px solid saddlebrown;
+    outline: 3px solid teal;
+    outline-offset: 10px;
+}
+
+#section-6{
+    margin-top: 100px;
+
+
+}
+
+
+#section-6 input{
+    border: 0;
+    outline: 0;
+    color: tomato;
+    background-color: #ffddbb;
+    padding: 12px 20px;
+    border-radius: 20px;
+    
+}
+
+#section-6 input::{
+    color: crimson;
+}
+

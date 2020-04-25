@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#div-1{
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    border: 1px solid #aaaaaa;
+    box-shadow: #999 3px 3px 10px;
+}
+
+#div-1:hover{
+    background-color: #eee;
+    box-shadow: #999 0px 0px 4px 1px;
+}

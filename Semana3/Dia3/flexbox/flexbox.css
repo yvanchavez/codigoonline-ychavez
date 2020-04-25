@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.padre{
+
+    flex-wrap: wrap;
+    height: 500px;
+    display: flex;
+    background-color: red;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.padre>div{
+    height: 145px;
+    margin: 5px;
+    background-color: #ccc;
+}
+
+.caja-1{
+    width: 100px;
+    /* flex: 1 2  100px; */
+}
+
+.caja-2{
+    width: 100px;
+    /* flex: 1 1 100px; */
+}
+
+.caja-3{
+    width: 100px;
+    /* flex: 1 1 100px; */
+}
+
+.caja-4{
+    width: 100px;
+    /* flex: 1 1 100px; */
+}
