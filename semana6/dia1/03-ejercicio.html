@@ -27,7 +27,7 @@
       <div class="form-der">
         <div class="fecha">
           <label for="fecha">Fecha:</label>
-          <input type="text" id="fecha" />
+          <input type="date" id="fecha" />
         </div>
         <div class="nro">
           <label for="nro">Nro:</label>
@@ -38,11 +38,11 @@
 
     <div class="producto">
       <div class="cantidad">
-        <label for="">Cantidad</label>
+        <label for="inputCantidad">Cantidad</label>
         <input type="number" id="inputCantidad" />
       </div>
       <div class="descripcion">
-        <label for="">Descripción</label>
+        <label for="inputDescripcion">Descripción</label>
         <input type="text" id="inputDescripcion" />
       </div>
       <div class="pUnit">
@@ -50,8 +50,8 @@
         <input type="number" id="inputPunit" />
       </div>
       <div class="pTotal">
-        <label for="">P.total</label>
-        <input type="number" id="inputPtotal" />
+        <label for="inputPtotal">P.total</label>
+        <input type="number" id="inputPtotal" disabled/>
       </div>
     </div>
     <button type="submit" class="submit" id="btnForm">
@@ -59,7 +59,7 @@
     </button>
   </form>
 
-  <div class="contenedor">
+  <div class="contenedor form-tabla">
     <h2>Lista de articulos</h2>
 
     <table>
@@ -72,21 +72,17 @@
         </tr>
       </thead>
       <tbody id="tbody">
-        <tr>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
-        </tr>
+       
         
       </tbody>
     </table>
     <div class="total">
       <p>Total s./</p>
-      <label for="" id="inputTotal">20</label>
+      <label for="" id="inputTotal"></label>
     </div>
     <div class="guardar">
       <p>Guardar todo</p>
-      <button type="button">
+      <button type="button" id="inputGuardar">
         <i class="far fa-save fa-4x"></i>
       </button>
     </div>

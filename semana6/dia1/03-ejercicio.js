@@ -11,9 +11,13 @@ let tbody = document.getElementById("tbody");
 let inputTotal = document.getElementById("inputTotal")
 
 let form = document.getElementById("form");
+let guardar = document.getElementById("inputGuardar");
 
+let facturas = []
 let detalle = [];
 let total = 0;
+
+//Funciones 
 
 const dibujarFilas = () => {
     tbody.innerHTML = "";
@@ -42,46 +46,26 @@ const dibujarFilas = () => {
 
 
     })
-    // elemento.focus() => forza al cursor a enforcarse o ubicarse en un elemento
-    // en este caso, en el input
-    //inputTarea.focus();
+  
    }
 
-/* btnForm.onclick = (e) =>{
-    e.preventDefault();
-    let nombre = inputNombre.value;
-    let ruc = inputRuc.value;
-    let fecha = inputFecha.value;
-    let nro = inputNro.value;
-
-    let cantidad = inputCantidad.value;
-    let descripcion = inputDescripcion.value;
-    let pUnit = inputPunit.value;
-    let pTotal = cantidad*pUnit;
-
-    let tr= document.createElement("tr");
-
-    let td1 = document.createElement("td");
-    td1.innerText = cantidad;
-    tr.appendChild(td1);
-
-    let td2 = document.createElement("td");
-    td2.innerText = descripcion;
-    tr.appendChild(td2);
-
-    let td3 = document.createElement("td");
-    td3.innerText = pUnit;
-    tr.appendChild(td3);
-
-    let td4 = document.createElement("td");
-    td4.innerText = pTotal;
-    tr.appendChild(td4);
-
-
-    tbody.appendChild(tr);
+   const borrarFilas = () => {
+    inputNombre.value = "";
+    inputRuc.value = "";
+    inputFecha.value = "";
+    inputNro.value = "";
+    inputTotal.innerText = "";
+    
+    for (let i = 0; i < detalle.length+1; i++) {
+        let tr = document.querySelector("tr");
+        tr.remove();
+        
+    }
     
     
-} */
+   }
+
+//Eventos
 
 inputPunit.onchange = () =>{
     inputPtotal.value = inputCantidad.value*inputPunit.value;
@@ -102,7 +86,6 @@ form.onsubmit = (e) => {
     console.log(objFila);
     
     detalle.push(objFila);
-    // limpiando el input luego de ingresar una tarea
     inputCantidad.value = "";
     inputDescripcion.value = "";
     inputPunit.value = "";
@@ -115,3 +98,21 @@ form.onsubmit = (e) => {
     dibujarFilas();
     inputTotal.innerText = total;
    }
+
+guardar.onclick = () => {
+    let objFactura = {
+        nombre : inputNombre.value,
+        ruc : inputRuc.value,
+        fecha : inputFecha.value,
+        nro : inputNro.value,
+        total ,
+        detalle 
+    }
+
+    facturas.push(objFactura)
+    let facturasString = JSON.stringify(facturas);
+    localStorage.setItem("facturas", facturasString);
+    
+    borrarFilas();
+    detalle = [];
+}
