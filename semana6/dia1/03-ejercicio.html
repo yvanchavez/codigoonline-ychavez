@@ -1,105 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./03-ejercicios.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form id="form" class="contenedor">
-      <div class="datos">
-        <div class="form-izq">
-          <div class="nombre">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" />
-          </div>
-          <div class="ruc">
-            <label for="nombre">Ruc:</label>
-            <input type="text" id="nombre" />
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./03-ejercicios.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="form" class="contenedor">
+    <div class="datos">
+      <div class="form-izq">
+        <div class="nombre">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" />
         </div>
-        <div class="form-der">
-          <div class="fecha">
-            <label for="nombre">Fecha:</label>
-            <input type="text" id="nombre" />
-          </div>
-          <div class="nro">
-            <label for="nombre">Nro:</label>
-            <input type="text" id="nombre" />
-          </div>
+        <div class="ruc">
+          <label for="ruc">Ruc:</label>
+          <input type="text" id="ruc" />
         </div>
       </div>
-
-      <div class="producto">
-        <div class="cantidad">
-          <label for="">Cantidad</label>
-          <input type="number" />
+      <div class="form-der">
+        <div class="fecha">
+          <label for="fecha">Fecha:</label>
+          <input type="text" id="fecha" />
         </div>
-        <div class="descripcion">
-          <label for="">Descripción</label>
-          <input type="text" />
-        </div>
-        <div class="pUnit">
-          <label for="">P.unit</label>
-          <input type="number" />
-        </div>
-        <div class="pTotal">
-          <label for="">P.total</label>
-          <input type="number" />
+        <div class="nro">
+          <label for="nro">Nro:</label>
+          <input type="text" id="nro" />
         </div>
       </div>
-      <button type="submit" class="submit">
-          <i class="far fa-save fa-4x"></i>
-      </button>
-    </form>
+    </div>
 
-    <div class="contenedor">
-      <h2>Lista de articulos</h2>
+    <div class="producto">
+      <div class="cantidad">
+        <label for="">Cantidad</label>
+        <input type="number" id="inputCantidad" />
+      </div>
+      <div class="descripcion">
+        <label for="">Descripción</label>
+        <input type="text" id="inputDescripcion" />
+      </div>
+      <div class="pUnit">
+        <label for="">P.unit</label>
+        <input type="number" id="inputPunit" />
+      </div>
+      <div class="pTotal">
+        <label for="">P.total</label>
+        <input type="number" id="inputPtotal" />
+      </div>
+    </div>
+    <button type="submit" class="submit" id="btnForm">
+      <i class="far fa-save fa-4x"></i>
+    </button>
+  </form>
 
-      <table>
+  <div class="contenedor">
+    <h2>Lista de articulos</h2>
+
+    <table>
+      <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Points</th>
+          <th>Cantidad</th>
+          <th>Descripción</th>
+          <th>P.unit</th>
+          <th>P.total</th>
         </tr>
+      </thead>
+      <tbody id="tbody">
         <tr>
           <td>Jill</td>
           <td>Smith</td>
           <td>50</td>
         </tr>
-        <tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-          <td>94</td>
-        </tr>
-        <tr>
-          <td>Adam</td>
-          <td>Johnson</td>
-          <td>67</td>
-        </tr>
-      </table>
-      <div class="total">
-        <p>Total s./</p>
-        <label for="">20</label>
-      </div>
-      <div class="guardar">
-        <p>Guardar todo</p>
-        <button type="button">
-            <i class="far fa-save fa-4x"></i>
-        </button>
-      </div>
+        
+      </tbody>
+    </table>
+    <div class="total">
+      <p>Total s./</p>
+      <label for="" id="inputTotal">20</label>
     </div>
-    <script src="./03-ejercicio.js"></script>
-  </body>
+    <div class="guardar">
+      <p>Guardar todo</p>
+      <button type="button">
+        <i class="far fa-save fa-4x"></i>
+      </button>
+    </div>
+  </div>
+  <script src="./03-ejercicio.js"></script>
+</body>
+
 </html>

@@ -91,7 +91,7 @@ body{
 
 
 .submit {
-    color: green;
+    color: val(--blue-ligth);
     border: none;
     position: absolute;
     right:-35px;
@@ -143,6 +143,6 @@ table {
   .guardar button{
       border: none;
       outline: none;
-      color: green;
+      color: val(--blue-ligth);
   }
   
