@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./03-ejercicios.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form" class="contenedor">
+      <div class="datos">
+        <div class="form-izq">
+          <div class="nombre">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" />
+          </div>
+          <div class="ruc">
+            <label for="nombre">Ruc:</label>
+            <input type="text" id="nombre" />
+          </div>
+        </div>
+        <div class="form-der">
+          <div class="fecha">
+            <label for="nombre">Fecha:</label>
+            <input type="text" id="nombre" />
+          </div>
+          <div class="nro">
+            <label for="nombre">Nro:</label>
+            <input type="text" id="nombre" />
+          </div>
+        </div>
+      </div>
+
+      <div class="producto">
+        <div class="cantidad">
+          <label for="">Cantidad</label>
+          <input type="number" />
+        </div>
+        <div class="descripcion">
+          <label for="">Descripción</label>
+          <input type="text" />
+        </div>
+        <div class="pUnit">
+          <label for="">P.unit</label>
+          <input type="number" />
+        </div>
+        <div class="pTotal">
+          <label for="">P.total</label>
+          <input type="number" />
+        </div>
+      </div>
+      <button type="submit" class="submit">
+          <i class="far fa-save fa-4x"></i>
+      </button>
+    </form>
+
+    <div class="contenedor">
+      <h2>Lista de articulos</h2>
+
+      <table>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Points</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>Adam</td>
+          <td>Johnson</td>
+          <td>67</td>
+        </tr>
+      </table>
+      <div class="total">
+        <p>Total s./</p>
+        <label for="">20</label>
+      </div>
+      <div class="guardar">
+        <p>Guardar todo</p>
+        <button type="button">
+            <i class="far fa-save fa-4x"></i>
+        </button>
+      </div>
+    </div>
+    <script src="./03-ejercicio.js"></script>
+  </body>
+</html>

@@ -32,3 +32,12 @@ inputNombre.onkeyup = (e) =>{
     //contador.innerText = texto;
     quedan.innerText = `Quedan ${15 - texto.length} caracteres`; 
 } */
+
+
+formulario.onmouseover = e =>{
+  formulario.style.boxShadow = "#888 0px 0px 10px";
+}
+
+formulario.onmouseleave = e =>{
+  formulario.style.boxShadow = "none";
+}

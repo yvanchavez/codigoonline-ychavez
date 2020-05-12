@@ -1,0 +1,148 @@
+:root{
+    --blue : #142850;
+    --blue-ligth : #27496d;
+    --turquesa : #00909e;
+    --gris : #dae1e7;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color:var(--gris);
+}
+.contenedor {
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    position: relative;
+}
+
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.form-izq {
+    flex: 1;
+}
+
+.form-der {
+    flex: 1;
+}
+
+.nombre label, .ruc label, .fecha label, .nro label {
+    width: 80px;
+    display: inline-block;
+    padding: 10px;
+    height: 30px;
+}
+
+.nombre input, .ruc input, .fecha input, .nro input {
+    width: 290px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid var(--turquesa);
+    outline: none;
+}
+
+.producto {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cantidad label, .descripcion label, .pUnit label, .pTotal label {
+    height: 30px;
+    display: block;
+}
+
+.cantidad, .pUnit, .pTotal {
+    flex: 1;
+    text-align: center;
+}
+
+.cantidad input, .pUnit input, .pTotal input {
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--turquesa);
+}
+
+.descripcion {
+    flex: 4;
+    text-align: center;
+    
+}
+
+.descripcion input {
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--turquesa);
+}
+
+
+.submit {
+    color: green;
+    border: none;
+    position: absolute;
+    right:-35px;
+    bottom:10px;
+    outline: none;
+}
+
+/* tabla */
+.contenedor h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .total{
+      text-align: end;
+  }
+  .total p {
+      display: inline-block;
+      padding: 20px;
+      font-size: 30px;
+  }
+
+  .total label{
+      display: inline-block;
+      padding: 20px 150px 20px 0px;
+      font-size: 25px;
+  }
+
+  .guardar p{
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .guardar button{
+      border: none;
+      outline: none;
+      color: green;
+  }
+  
