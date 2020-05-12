@@ -71,7 +71,15 @@ inputPunit.onchange = () =>{
     inputPtotal.value = inputCantidad.value*inputPunit.value;
 }
 
+inputPunit.onkeyup = () =>{
+    inputPtotal.value = inputCantidad.value*inputPunit.value;
+}
+
 inputCantidad.onchange = () =>{
+    inputPtotal.value = inputCantidad.value*inputPunit.value;
+}
+
+inputCantidad.onkeyup = () =>{
     inputPtotal.value = inputCantidad.value*inputPunit.value;
 }
 
