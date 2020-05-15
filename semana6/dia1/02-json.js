@@ -1,34 +1,32 @@
-let formDatos = document.getElementById("form-datos");
+let formDatos = document.getElementById("formDatos");
 let inputNombre = document.getElementById("inputNombre");
 let inputApellido = document.getElementById("inputApellido");
-
-////// Trabajando con JSON /////
+/////////Trabajando con JSON/////////
 let persona = {
-    nombre : 'Julio',
-    apellido : 'Caceres'
+ nombre: 'Julio',
+ apellido: 'Cáceres'
 }
-
 console.log(persona);
-//Convertir Json a formato String
+// CONVERTIR UN JSON A FORMATO STRING
+// JSON.sringify(objeto) => devuelve el objeto en string
 let personaString = JSON.stringify(persona);
 console.log(personaString);
+// CONVERTIR UN STRING A FORMATO JSON
+// JSON.parse("objeto en formato STRING") => devuelve el objeto string
+// en formato JSON
+let personaJSON = JSON.parse(personaString);
+console.log(personaJSON);
+//////////////////////////////////////
 
-//convertir string a formato Json
-let personaJson = JSON.parse(personaString);
-console.log(personaJson);
- 
-///////////////////////////////////
 
-formDatos.onsubmit = (e) => {
-    e.preventDefault();
-    let objPersona = {
-        nombre : inputNombre.value,
-        apellido : inputApellido.value
-    }
-    console.log(objPersona);
-    
+formDatos.onsubmit = () => {
+ let objPersona = {
+  nombre: inputNombre.value,
+  apellido: inputApellido.value
+ }
+ let objPersonaString = JSON.stringify(objPersona);
+ localStorage.setItem("persona", objPersonaString);
 
-    let objPersonaString = JSON.stringify(objPersona);
-
-    localStorage.setItem("persona",objPersonaString);
 }
+
+
