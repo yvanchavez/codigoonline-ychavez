@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .row {
+        margin: 20px 0;
+      }
+      h5 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 class="text center">Toasts</h2>
+    <main>
+      <div class="row">
+        <div class="col s4 offset-s6">
+          <a onclick="M.toast({html: 'Soy un toast'})" class="btn">Toast!</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h5>Custom HTML</h5>
+        <div class="col s4 offset-s6">
+          <a class="btn" id="toast2">Toast!</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h5>Callback</h5>
+        <div class="col s4 offset-s6">
+          <a
+            class="btn"
+            onclick="M.toast({html: 'callback', completeCallback: function(){alert('soy un callback')}})"
+            >callback</a
+          >
+        </div>
+      </div>
+
+      <div class="row">
+        <h5>Styling Toasts</h5>
+        <div class="col s4 offset-s6">
+          <a
+            onclick=" M.toast({html: 'Soy un toast con estilo!', classes: 'rounded'});"
+            class="btn"
+            >Toast!</a
+          >
+        </div>
+      </div>
+    </main>
+    <!--JavaScript at end of body for optimized loading-->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      let toast2 = document.getElementById("toast2");
+      toast2.onclick = () => {
+        var toastHTML =
+          '<span>Soy un toast content</span><button class="btn-flat toast-action">boton</button>';
+        M.toast({ html: toastHTML });
+      };
+    </script>
+  </body>
+</html>

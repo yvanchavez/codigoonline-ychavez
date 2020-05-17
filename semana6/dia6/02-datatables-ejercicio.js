@@ -4573,4 +4573,9 @@ $("#busqueda").keyup((e) => {
   dibujar(resultados);
 });
 
-$("#tabla").DataTable();
+$("#tabla").DataTable({
+  dom: 'Bfrtip',
+  buttons: [
+   'copy', 'csv', 'excel', 'pdf', 'print'
+  ]
+ });
