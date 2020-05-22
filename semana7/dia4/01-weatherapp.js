@@ -59,4 +59,5 @@ const buscarCiudad = (ciudad) => {
 busquedaForm.onsubmit = (e) => {
  e.preventDefault();
  buscarCiudad(busqueda__input.value.trim());
+ 
 }
