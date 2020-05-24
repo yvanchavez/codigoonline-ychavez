@@ -103,14 +103,14 @@
                   <label for="selectAll"></label>
                 </span>
               </th>
-              <th>Nnombre</th>
+              <th>Nombre</th>
               <th>Apellido</th>
               <th>DNI</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            
               
           </tbody>
         </table>
@@ -178,9 +178,9 @@
     <div id="editEmployeeModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form>
+          <form id="formUpdate">
             <div class="modal-header">
-              <h4 class="modal-title">Edit Employee</h4>
+              <h4 class="modal-title">Actualizar Repartidor</h4>
               <button
                 type="button"
                 class="close"
@@ -191,21 +191,21 @@
               </button>
             </div>
             <div class="modal-body">
-              <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control" required />
+              <div class="form-group " hidden>
+                <label>Id</label>
+                <input type="text" class="form-control" required id="inputId"/>
               </div>
               <div class="form-group">
-                <label>Email</label>
-                <input type="email" class="form-control" required />
+                <label>Nombre</label>
+                <input type="text" class="form-control" required id="inputNombreUpd"/>
               </div>
               <div class="form-group">
-                <label>Address</label>
-                <textarea class="form-control" required></textarea>
+                <label>Apellido</label>
+                <input type="text" class="form-control" required id="inputApellidoUpd"/>
               </div>
               <div class="form-group">
-                <label>Phone</label>
-                <input type="text" class="form-control" required />
+                <label>DNI</label>
+                <input type="text" class="form-control" required id="inputDniUpd"/>
               </div>
             </div>
             <div class="modal-footer">
@@ -225,7 +225,7 @@
     <div id="deleteEmployeeModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
-          <form>
+          <form id="formDelete">
             <div class="modal-header">
               <h4 class="modal-title">Delete Employee</h4>
               <button
