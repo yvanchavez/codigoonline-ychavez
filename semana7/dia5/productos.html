@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CRUD Cliente</title>
+    <title>CRUD Productos</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"
@@ -47,14 +47,14 @@
               >Pedidos<span class="sr-only">(current)</span></a
             >
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Clientes</a>
+          <li class="nav-item ">
+            <a class="nav-link" href="./cliente.html">Clientes</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="./repartidor.html">Repartidores</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Productos</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="./">Productos</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -75,7 +75,7 @@
         <div class="table-title">
           <div class="row">
             <div class="col-sm-6">
-              <h2>Administrar <b>Clientes</b></h2>
+              <h2>Administrar <b>Productos</b></h2>
             </div>
             <div class="col-sm-6">
               <a
@@ -83,7 +83,7 @@
                 class="btn btn-success"
                 data-toggle="modal"
                 ><i class="material-icons">&#xE147;</i>
-                <span>Agregar nuevo cliente</span></a
+                <span>Agregar nuevo producto</span></a
               >
               <a
                 href="#deleteEmployeeModal"
@@ -104,8 +104,8 @@
                 </span>
               </th>
               <th>Nombre</th>
-              <th>Apellido</th>
-              <th>DNI</th>
+              <th>Precio</th>
+              <th>Imagen</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -136,7 +136,7 @@
         <div class="modal-content">
           <form id="formAdd">
             <div class="modal-header">
-              <h4 class="modal-title">Agregar Cliente</h4>
+              <h4 class="modal-title">Agregar Productos</h4>
               <button
                 type="button"
                 class="close"
@@ -152,12 +152,12 @@
                 <input type="text" class="form-control" required id="inputNombre"/>
               </div>
               <div class="form-group">
-                <label>Apellido</label>
-                <input type="text" class="form-control" required id="inputApellido"/>
+                <label>Precio</label>
+                <input type="number" class="form-control" required id="inputPrecio"/>
               </div>
               <div class="form-group">
-                <label>DNI</label>
-                <input type="text" class="form-control" required id="inputDni"/>
+                <label>Imagen</label>
+                <input type="text" class="form-control" required id="inputImagen"/>
               </div>
               
             </div>
@@ -180,7 +180,7 @@
         <div class="modal-content">
           <form id="formUpdate">
             <div class="modal-header">
-              <h4 class="modal-title">Actualizar Cliente</h4>
+              <h4 class="modal-title">Actualizar Producto</h4>
               <button
                 type="button"
                 class="close"
@@ -200,12 +200,12 @@
                 <input type="text" class="form-control" required id="inputNombreUpd"/>
               </div>
               <div class="form-group">
-                <label>Apellido</label>
-                <input type="text" class="form-control" required id="inputApellidoUpd"/>
+                <label>Precio</label>
+                <input type="number" class="form-control" required id="inputPrecioUpd"/>
               </div>
               <div class="form-group">
-                <label>DNI</label>
-                <input type="text" class="form-control" required id="inputDniUpd"/>
+                <label>Imagen</label>
+                <input type="text" class="form-control" required id="inputImagenUpd"/>
               </div>
             </div>
             <div class="modal-footer">
@@ -227,7 +227,7 @@
         <div class="modal-content">
           <form id="formDelete">
             <div class="modal-header">
-              <h4 class="modal-title">Eliminar Clientes</h4>
+              <h4 class="modal-title">Eliminar Productos</h4>
               <button
                 type="button"
                 class="close"
@@ -238,7 +238,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>¿Está seguro que quiere el eliminar los clientes seleccionados?</p>
+              <p>¿Está seguro que quiere el eliminar los productos seleccionados?</p>
               <p class="text-warning">
                 <small>Esta acción no se puede deshacer.</small>
               </p>
@@ -271,6 +271,6 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="./cliente.js"></script>
+    <script src="./productos.js"></script>
   </body>
 </html>

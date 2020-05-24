@@ -185,6 +185,15 @@ table.table .avatar {
     box-shadow: none;
     background: #ddd;
 }
+
+img{
+    width: 200px;
+    border-radius: 5px;
+}
+
+#td-img{
+    width: 200px;
+}
 /* Modal styles */
 .modal .modal-dialog {
     max-width: 400px;
