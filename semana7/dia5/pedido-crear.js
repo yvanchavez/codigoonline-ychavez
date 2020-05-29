@@ -1,7 +1,10 @@
-const URL_BACKEND = "https://5ec8650b155c130016a909e3.mockapi.io";
+const URL_BACKEND = "https://5ec86440155c130016a909c5.mockapi.io";
 let selectRepartidor = document.getElementById("selectRepartidor");
 let selectCliente = document.getElementById("selectCliente");
 let selectProducto = document.getElementById("selectProducto");
+let formPedido = document.getElementById("formPedido");
+let inputOrigen = document.getElementById("inputOrigen");
+let inputDestino = document.getElementById("inputDestino");
 
 //Traer los repartidores
 const getRepartidores = () => {
@@ -111,3 +114,36 @@ getClientes();
 getProductos();
 
 
+// Creando variable del mapa
+let mymap = L.map('mapa').setView([-16.4028734, -71.5137748], 13);
+// Configurando la clave del mapa
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+ attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+ maxZoom: 18,
+ id: 'mapbox/streets-v11',
+ tileSize: 512,
+ zoomOffset: -1,
+ accessToken: 'pk.eyJ1Ijoiam9yZ2VnYXJiYSIsImEiOiJja2FuNWQzeHAwZTlvMnlybWZ5emxta2NsIn0.LPjKqyhLy6KFxFLTKcRNWw'
+}).addTo(mymap);
+
+// Creando los 2 marcadores (inicio y fin)
+var iconoIni = L.icon({
+ iconUrl: './img/pin.png',
+ iconSize: [32, 32], // size of the icon
+ iconAnchor: [32, 32], // point of the icon which will correspond to marker's location
+});
+let marcadorIni = L.marker([-16.402, -71.513], { icon: iconoIni, draggable: true }).addTo(mymap);
+marcadorIni.on("dragend", (e) => {
+ inputOrigen.value = JSON.stringify({ lat: e.target._latlng.lat, lng: e.target._latlng.lng })
+})
+
+
+var iconoFin = L.icon({
+ iconUrl: './img/pinverde.png',
+ iconSize: [32, 32], // size of the icon
+ iconAnchor: [32, 32], // point of the icon which will correspond to marker's location
+});
+let marcadorFin = L.marker([-16.405, -71.514], { icon: iconoFin, draggable: true }).addTo(mymap);
+marcadorFin.on("dragend", (e) => {
+ inputDestino.value = JSON.stringify({ lat: e.target._latlng.lat, lng: e.target._latlng.lng })
+})
