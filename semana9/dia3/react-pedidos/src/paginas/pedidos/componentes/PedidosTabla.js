@@ -1,7 +1,7 @@
 import React from 'react'
 import PedidoFila from './PedidoFila'
 
-const PedidosTabla = ({ pedidos, setObjPedido }) => {
+const PedidosTabla = ({getPedidos, pedidos, setObjPedido }) => {
   return (
     <table className="table table-hover table-bordered table-striped">
       <thead>

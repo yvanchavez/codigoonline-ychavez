@@ -48,7 +48,11 @@ const Pedidos = () => {
   
   return (
     <Fragment>
-      <PedidoForm />
+      <PedidoForm 
+      getPedidos={getPedidos}
+      objPedido={objPedido}
+      setObjPedido={setObjPedido}
+      />
       <div className="row justify-content-center mt-5">
         <div className="col-md-8">
           {Cargando === true ? (
