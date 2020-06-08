@@ -125,6 +125,8 @@ const PedidoForm = () => {
                 <select name="ped_est" onChange={handleChange}
                   id="" className="form-control" value={formulario.ped_est}>
                   <option value="">Seleccione</option>
+                  <option value="">Pedido</option>
+                  <option value="">realizado</option>
                 </select>
               </div>
               <div className="form-group col-md-3">
