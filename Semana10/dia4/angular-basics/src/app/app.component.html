@@ -1,0 +1,20 @@
+<header class="header">
+  <nav>
+    <ul>
+      <li *ngFor="let enlace of enlaces">
+        <a href="">{{enlace}}</a>
+      </li>       
+    </ul>
+  </nav>
+  <span *ngIf="autenticado">
+    {{nombre}}
+  </span>
+  <span *ngIf="!autenticado">Sin Sesión</span>
+</header>
+<main class="main">
+  <h2>Contenido Principal</h2>
+  <button (click)="cambiarSesion()">Cambiar Sesión</button>
+</main>
+<footer class="footer">
+  <p>Codigo &copy; Todos los derechos reservados</p>
+</footer>
